@@ -11,7 +11,8 @@ class Backer
 
   def back_project(project)
     @backed_projects.push project
-    project.add_backer(self) unless project.backers.include?(self)
+    project.backers << self
+    # project.add_backer(self) unless project.backers.include?(self)
     # binding.pry
   end
 end
